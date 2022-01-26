@@ -1,4 +1,8 @@
-import tax.TaxType;
+package chain_of_responsibility;
+
+import chain_of_responsibility.store.Budget;
+import strategy.store.TaxCalculator;
+import strategy.tax.ISS;
 
 import java.math.BigDecimal;
 
@@ -8,7 +12,7 @@ public class TaxTest {
         Budget budget = new Budget(new BigDecimal("100"));
         TaxCalculator calculator = new TaxCalculator();
 
-        System.out.println(calculator.calculate(budget, TaxType.ICMS));
+        System.out.println(calculator.calculate(budget, new ISS()));
 
     }
 }

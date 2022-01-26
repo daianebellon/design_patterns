@@ -1,7 +1,8 @@
+package chain_of_responsibility.store;
+
 import java.math.BigDecimal;
 
 public class Budget {
-
     private BigDecimal value;
 
     public Budget(BigDecimal value) {
